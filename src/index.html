@@ -11,7 +11,15 @@
 </head>
 <body>
 
-  <my-side-drawer></my-side-drawer>
+  <my-side-drawer title="Main menu"></my-side-drawer>
+
+  <script>
+    const sideDrawer = document.querySelector('my-side-drawer')
+    setTimeout(() => {
+      // sideDrawer.title = 'It changed!'
+      // sideDrawer.setAttribute('title', 'It changed via Attribute')
+    }, 3000)
+  </script>
 
 </body>
 </html>
