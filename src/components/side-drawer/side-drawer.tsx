@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core'
     shadow: true
 })
 export class SideDrawer {
-    @Prop() title: string
+    @Prop({reflectToAttr: true}) title: string
 
     render() {
         return (
