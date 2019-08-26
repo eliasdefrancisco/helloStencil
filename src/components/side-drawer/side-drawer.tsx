@@ -7,24 +7,19 @@ import { Component, h, Prop } from '@stencil/core'
 })
 export class SideDrawer {
     @Prop({reflectToAttr: true}) title: string
-    // @Prop() open: boolean
+    @Prop({ reflectToAttr: true, mutable: true }) open: boolean
+
+    onCloseDrawer() {
+        this.open = false
+    }
 
     render() {
-        // let content = null
-        // if (this.open) {
-        //     content = (
-        //         <aside>
-        //             <header><h1>{ this.title }</h1></header>
-        //             <main>
-        //                 <slot />
-        //             </main>
-        //         </aside>
-        //     )
-            
-        // }
         return (
             <aside>
-                <header><h1>{ this.title }</h1></header>
+                <header>
+                    <h1>{ this.title }</h1>
+                    <button onClick={ this.onCloseDrawer.bind(this) }>X</button>
+                </header>
                 <main>
                     <slot />
                 </main>

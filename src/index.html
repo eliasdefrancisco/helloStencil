@@ -27,6 +27,8 @@
 </head>
 <body>
 
+  <button id="side-drawer-btn">Open Side Menu</button>
+
   <my-side-drawer title="Main menu">
     <nav class="side-nav">
       <ul>
@@ -38,7 +40,11 @@
   </my-side-drawer>
 
   <script>
+    const sideDrawerButton = document.querySelector('#side-drawer-btn')
     const sideDrawer = document.querySelector('my-side-drawer')
+    sideDrawerButton.addEventListener('click', () => {
+      sideDrawer.open = true
+    })
     setTimeout(() => {
       sideDrawer.title = 'It changed!'
       // sideDrawer.setAttribute('title', 'It changed via Attribute')
