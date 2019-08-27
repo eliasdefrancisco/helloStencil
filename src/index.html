@@ -43,7 +43,8 @@
     const sideDrawerButton = document.querySelector('#side-drawer-btn')
     const sideDrawer = document.querySelector('my-side-drawer')
     sideDrawerButton.addEventListener('click', () => {
-      sideDrawer.open = true
+      // sideDrawer.opened = true
+      sideDrawer.open()
     })
     setTimeout(() => {
       sideDrawer.title = 'It changed!'
