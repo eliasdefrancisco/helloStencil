@@ -64,3 +64,7 @@ header button:focus {
     background: black;
     color: white;
 }
+
+#contact-information {
+    padding: 0 1rem;
+}
